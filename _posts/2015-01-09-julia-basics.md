@@ -3,8 +3,8 @@ layout: post
 title: "Julia Basics"
 date: 2015-01-09
 backgrounds:
-    - http://julialang.org/images/gadfly-demo.png
-thumb: http://www.machinelearningwithjulia.ml/assets/images/julia-logo.png
+    - /assets/images/gadfly-demo.png
+thumb: /assets/images/julia-logo.png
 category: julia
 tags: julia viarable type function REPL
 ---
