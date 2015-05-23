@@ -1,0 +1,16 @@
+# RRSSB
+facebook: true
+twitter: true
+instagram: true
+googleplus: false
+linkedin: true
+github: true
+reddit: false
+hackernews: false
+pinterest: false
+tumblr: false
+pocket: false
+email: true
+
+# Disqus
+disqus_shortname: machinelearningwithjulia

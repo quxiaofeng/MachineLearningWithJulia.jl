@@ -1,2 +1,4 @@
-*.jl.cov
-*.jl.mem
+_site
+.sass-cache
+
+bower_components/
