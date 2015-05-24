@@ -3,9 +3,8 @@ layout: post
 title: "Regression"
 date: 2015-01-12
 backgrounds:
-    - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/vanilla.jpeg
-    - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/morning.jpeg
-thumb: https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/thumbs/the-bridge.jpeg
+    - http://preview.quanjing.com/mf088/mf700-06512718.jpg
+thumb: http://preview.quanjing.com/mf088/mf700-06512718.jpg
 categories: travel city
 tags: work business metropolis
 ---

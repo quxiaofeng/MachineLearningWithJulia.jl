@@ -3,12 +3,10 @@ layout: post
 title: "Classification"
 date: 2015-01-10
 backgrounds:
-    - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/on-the-road.jpeg
-    - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/freezing.jpeg
-    - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/village.jpeg
-thumb: https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/thumbs/peak.jpeg
-category: photography
-tags: mountain snow nature
+    - http://preview.quanjing.com/amana_rm002/26082000344.jpg
+thumb: http://preview.quanjing.com/amana_rm002/26082000344.jpg
+category: julia
+tags: pattern classification
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta, felis eget vehicula porttitor, mauris ipsum tincidunt ligula, ac pretium risus sapien at metus. Donec pellentesque volutpat porttitor. Integer condimentum sagittis viverra. Vivamus suscipit quis lectus porta sollicitudin.

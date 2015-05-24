@@ -3,9 +3,9 @@ layout: post
 title: "Unsupervised Learning"
 date: 2015-02-05
 backgrounds:
-    - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/tube.jpg
-thumb: https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/thumbs/chemex.jpg
-categories: travel city
+    - http://preview.quanjing.com/mf088/mf700-06512756.jpg
+thumb: http://preview.quanjing.com/mf088/mf700-06512756.jpg
+categories: julia
 tags: japan winter spring metropolis
 ---
 

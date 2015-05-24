@@ -3,10 +3,9 @@ layout: post
 title: "Cloud Computing"
 date: 2015-02-06
 backgrounds:
-    - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/code-screen.jpg
-    - https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/the-desk.jpg
-thumb: https://dl.dropboxusercontent.com/u/18322837/cdn/Streetwill/thumbs/coding.jpg
-categories: development work
+    - http://preview.quanjing.com/mf088/mf700-06486033.jpg
+thumb: http://preview.quanjing.com/mf088/mf700-06486033.jpg
+categories: julia
 tags: home work office coding design
 ---
 
