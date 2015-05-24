@@ -40,21 +40,15 @@ tags: julia viarable type function REPL
 #### 安装 ####
 
 {% highlight julia%}
-
 Pkg.update()
-
 Pkg.add("IJulia")
-
 {% endhighlight %}
 
 #### 运行 ####
 
 {% highlight julia %}
-
 using IJulia
-
 notebook()
-
 {% endhighlight %}
 
 运行新建窗口如下
