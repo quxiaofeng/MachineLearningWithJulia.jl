@@ -37,25 +37,24 @@ tags: julia viarable type function REPL
 1. Anaconda Python
 2. IPython (Jupiter)
 
-#### 安装 ####
-
-```
+{% highlight julia%}
 
 Pkg.update()
 
 Pkg.add("IJulia")
 
-```
+{% endhighlight %}
 
 #### 运行 ####
 
-```
+
+{% highlight julia %}
 
 using IJulia
 
 notebook()
 
-```
+{% endhighlight %}
 
 #### 变量 ####
 
