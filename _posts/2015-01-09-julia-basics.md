@@ -39,7 +39,7 @@ tags: julia viarable type function REPL
 
 #### 安装 ####
 
-{% highlight julia%}
+{% highlight julia %}
 Pkg.update()
 Pkg.add("IJulia")
 {% endhighlight %}
@@ -57,11 +57,17 @@ notebook()
 
 ### 变量 ###
 
+简单说，基本变量跟 MATLAB 使用方式一样。变量的类型不是强制使用的。
+
+额外的优点是：可以使用 unicode 字符作为变量名。包括数学常用的希腊字母和中文。前者方便直接使用数学语言写数学相关的程序；后者方便中文读者日常使用。
+
 ![](/assets/images/julia-viarable-example.jpg)
 
 ### 控制逻辑 ###
 
 ### 函数 ###
+
+函数的声明可以使用完整声明，也可以用类似隐函数的方式使用。
 
 ![](/assets/images/julia-function-example.jpg)
 
