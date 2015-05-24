@@ -63,6 +63,8 @@ notebook()
 
 ### 变量 ###
 
+![](/assets/images/julia-viarable-example.jpg)
+
 ### 控制逻辑 ###
 
 ### 函数 ###
