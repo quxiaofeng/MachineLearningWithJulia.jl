@@ -66,6 +66,8 @@ notebook()
 
 #### 函数 ####
 
+![](/assets/images/julia-function-example.jpg)
+
 ## Julia 语言的优点 ##
 
 数学表达能力强，原生支持各种矩阵、向量运算。各种功能的正交组合甚至超过了 MATLAB。例如： MATLAB 矩阵运算中，可以和`.`搭配的运算符很有限，`.*` (Element-wise multiplication), `.^` (Element-wise power), `./` (Right array division), `.\` (Left array division), `.'` (Array transpose)。Julia 语言中，运算符与 `.` 的搭配就很正交，几乎所有运算符都可以加上 `.` 运算符，变成 elementwise （元素对元素的）运算符。
