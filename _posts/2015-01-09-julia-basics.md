@@ -40,17 +40,21 @@ tags: julia viarable type function REPL
 #### 安装 ####
 
 ```
+
 Pkg.update()
 
 Pkg.add("IJulia")
+
 ```
 
 #### 运行 ####
 
 ```
+
 using IJulia
 
 notebook()
+
 ```
 
 #### 变量 ####
