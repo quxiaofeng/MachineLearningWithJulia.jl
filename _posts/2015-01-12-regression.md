@@ -4,7 +4,7 @@ title: "Regression"
 date: 2015-01-12
 backgrounds:
     - http://preview.quanjing.com/mf088/mf700-06512718.jpg
-thumb: http://preview.quanjing.com/mf088/mf700-06512718.jpg
+thumb: http://1x.com/images/user/90449abe9237913eb8bc74f6bd19dd8a-ld.jpg
 categories: travel city
 tags: work business metropolis
 ---

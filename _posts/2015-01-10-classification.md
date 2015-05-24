@@ -4,7 +4,7 @@ title: "Classification"
 date: 2015-01-10
 backgrounds:
     - http://preview.quanjing.com/amana_rm002/26082000344.jpg
-thumb: http://preview.quanjing.com/amana_rm002/26082000344.jpg
+thumb: http://1x.com/images/user/f76dd2d487fb31bb503714753e320d24-ld.jpg
 category: julia
 tags: pattern classification
 ---
