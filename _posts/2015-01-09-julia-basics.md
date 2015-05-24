@@ -28,6 +28,35 @@ tags: julia viarable type function REPL
 + [https://github.com/chezou/julia-100-exercises](https://github.com/chezou/julia-100-exercises)
 + [https://github.com/Aerlinger/JuliaExamples](https://github.com/Aerlinger/JuliaExamples)
 
+## IJulia 及 Julia 变量、控制逻辑与函数 ##
+
+### IJulia 的安装 ###
+
+#### 依赖 ####
+
+1. Anaconda Python
+2. IPython (Jupiter)
+
+#### 安装 ####
+
+```
+Pkg.update()
+Pkg.add("IJulia")
+```
+
+#### 运行 ####
+
+```
+using IJulia
+notebook()
+```
+
+#### 变量 ####
+
+#### 控制逻辑 ####
+
+#### 函数 ####
+
 ## Julia 语言的优点 ##
 
 数学表达能力强，原生支持各种矩阵、向量运算。各种功能的正交组合甚至超过了 MATLAB。例如： MATLAB 矩阵运算中，可以和`.`搭配的运算符很有限，`.*` (Element-wise multiplication), `.^` (Element-wise power), `./` (Right array division), `.\` (Left array division), `.'` (Array transpose)。Julia 语言中，运算符与 `.` 的搭配就很正交，几乎所有运算符都可以加上 `.` 运算符，变成 elementwise （元素对元素的）运算符。
