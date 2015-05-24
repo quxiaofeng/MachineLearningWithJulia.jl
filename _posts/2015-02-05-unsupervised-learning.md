@@ -3,9 +3,9 @@ layout: post
 title: "Unsupervised Learning"
 date: 2015-02-05
 backgrounds:
-    - http://preview.quanjing.com/mf088/mf700-06512756.jpg
+    - /assets/images/backgrounds/reflections.jpg
 thumb: http://1x.com/images/user/bd5c62c0b788cf81ee386665bfcadfad-ld.jpg
-categories: julia
+category: julia
 tags: japan winter spring metropolis
 ---
 
