@@ -56,6 +56,10 @@ notebook()
 
 {% endhighlight %}
 
+运行新建窗口如下
+
+![](/assets/images/jupiter-new.png)
+
 #### 变量 ####
 
 #### 控制逻辑 ####
