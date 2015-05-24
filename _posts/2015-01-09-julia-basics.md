@@ -41,6 +41,7 @@ tags: julia viarable type function REPL
 
 ```
 Pkg.update()
+
 Pkg.add("IJulia")
 ```
 
@@ -48,6 +49,7 @@ Pkg.add("IJulia")
 
 ```
 using IJulia
+
 notebook()
 ```
 
