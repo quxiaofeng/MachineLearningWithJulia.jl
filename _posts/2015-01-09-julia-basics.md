@@ -30,12 +30,14 @@ tags: julia viarable type function REPL
 
 ## IJulia 及 Julia 变量、控制逻辑与函数 ##
 
-### IJulia 的安装 ###
+### IJulia ###
 
 #### 依赖 ####
 
 1. Anaconda Python
 2. IPython (Jupiter)
+
+#### 安装 ####
 
 {% highlight julia%}
 
@@ -46,7 +48,6 @@ Pkg.add("IJulia")
 {% endhighlight %}
 
 #### 运行 ####
-
 
 {% highlight julia %}
 
@@ -60,11 +61,11 @@ notebook()
 
 ![](/assets/images/jupiter-new.png)
 
-#### 变量 ####
+### 变量 ###
 
-#### 控制逻辑 ####
+### 控制逻辑 ###
 
-#### 函数 ####
+### 函数 ###
 
 ![](/assets/images/julia-function-example.jpg)
 
