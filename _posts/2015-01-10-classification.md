@@ -4,7 +4,7 @@ title: "Classification"
 date: 2015-01-10
 backgrounds:
     - /assets/images/backgrounds/color-blocks.jpg
-thumb: http://1x.com/images/user/f76dd2d487fb31bb503714753e320d24-ld.jpg
+thumb: /assets/images/thumbs/f76dd2d487fb31bb503714753e320d24-ld.jpg
 category: julia
 tags: pattern classification
 ---

@@ -4,7 +4,7 @@ title: "Regression"
 date: 2015-01-12
 backgrounds:
     - /assets/images/backgrounds/oil-painting-fire.jpg
-thumb: http://1x.com/images/user/90449abe9237913eb8bc74f6bd19dd8a-ld.jpg
+thumb: /assets/images/thumbs/90449abe9237913eb8bc74f6bd19dd8a-ld.jpg
 category: julia
 tags: work business metropolis
 ---

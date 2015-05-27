@@ -4,7 +4,7 @@ title: "Julia 基础"
 date: 2015-01-09
 backgrounds:
     - /assets/images/backgrounds/mbmlbookcover.png
-thumb: /assets/images/julia-logo.png
+thumb: /assets/images/thumbs/julia-logo.png
 category: julia
 tags: julia viarable type function REPL
 ---
