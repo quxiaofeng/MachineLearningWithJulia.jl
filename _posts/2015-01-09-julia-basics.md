@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Julia 基础"
-date: 2015-01-09
+date: 2015-05-29 14:14:14
 backgrounds:
     - /assets/images/backgrounds/mbmlbookcover.png
 thumb: /assets/images/thumbs/julia-logo.png
