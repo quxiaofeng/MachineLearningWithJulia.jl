@@ -13,9 +13,8 @@ tags: pattern classification
 
 调用 Python 的 scikit-learn 包的 SVM 代码。
 
-```
-
-# julia "svmtest.jl"
+{% highlight julia %}
+ # julia "svmtest.jl"
 using PyCall
 
 @pyimport sklearn.svm as svm
@@ -27,8 +26,7 @@ clf = svm.LinearSVC()
 clf[:fit](X, y)
 dec = clf[:decision_function]([1.2 0.8])
 println("$(dec[1,2])")
-
-```
+{% endhighlight %}
 
 ## DPL
 
