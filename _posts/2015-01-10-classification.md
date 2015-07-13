@@ -32,7 +32,7 @@ println("$(dec[1,2])")
 
 Projective Dictionary Pair Learning 投影字典对学习算法 [[Github]](https://github.com/quxiaofeng/ProjectiveDictionaryPairLearning.jl)。
 
-<div id="katex">$$\min_{P,D}{\sum_{k=1}^K\|X_k-D_kP_kX_k\|_F^2}$$</div>
+$$\min_{P,D}{\sum_{k=1}^K\|X_k-D_kP_kX_k\|_F^2}$$
 
 ### 安装
 
