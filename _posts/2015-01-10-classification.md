@@ -45,6 +45,7 @@ Pkg.update(); Pkg.add("ProjectiveDictionaryPariLearning")
 ```julia
 DictMat, EncoderMat = TrainDPL(TrData, TrLabel, DictSize, τ, λ, γ)
 ```
+
 #### 分类
 
 ```julia
