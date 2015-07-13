@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "分类问题"
+title: "模式分类"
 date: 2015-07-13 15:17:47
 backgrounds:
     - /assets/images/backgrounds/color-blocks.jpg
