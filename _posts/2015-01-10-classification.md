@@ -36,6 +36,9 @@ Projective Dictionary Pair Learning 投影字典对学习算法 [[Github]](https
 
 $$\min_{P,D}{\sum_{k=1}^K\|X_k-D_kP_kX_k\|_F^2}$$
 
+$${P^*,D^*} = \arg\min_{P,D}{\sum_{k=1}^K\|X_k-D_kP_kX_k\|_F^2 +\lambda\|P_k\bar{X}_k\|_F^2}$$
+$$s.t.\ \|d_i\|_2^2\leq 1$$
+
 ### 安装
 
 ```
