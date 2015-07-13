@@ -13,7 +13,7 @@ tags: pattern classification
 
 调用 Python 的 scikit-learn 包的 SVM 代码。
 
-```julia
+```python
 # julia "svmtest.jl"
 using PyCall
 
@@ -34,7 +34,7 @@ Projective Dictionary Pair Learning 投影字典对学习算法 [[Github]](https
 
 ### 安装
 
-```julia
+```python
 Pkg.update(); Pkg.add("ProjectiveDictionaryPariLearning")
 ```
 
@@ -42,12 +42,12 @@ Pkg.update(); Pkg.add("ProjectiveDictionaryPariLearning")
 
 #### 训练
 
-```julia
+```python
 DictMat, EncoderMat = TrainDPL(TrData, TrLabel, DictSize, τ, λ, γ)
 ```
 
 #### 分类
 
-```julia
+```python
 PredictLabel, Error, Distance = ClassificationDPL(TtData, DictMat, EncoderMat, DictSize)
 ```
