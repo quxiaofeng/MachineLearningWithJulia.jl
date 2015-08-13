@@ -97,13 +97,17 @@ notebook()
 
 ### 数学计算法 ###
 
-    sum(6:6:101)
+根据
+
+{% highlight julia %}
+sum(6:6:101)
+{% endhighlight %}
 
 ### 循环 + 条件判断法 ###
 
 + version 1
 
-```ruby
+{% highlight julia %}
 Σ = 0
 for x in 1:100 
   if x%2 == 0 && x%3 == 0
@@ -111,54 +115,68 @@ for x in 1:100
   end
 end
 println("Σ: $Σ")
-```
+{% endhighlight %}
 
 + version 2
 
-```ruby
+{% highlight julia %}
 Σ = 0
 for x in filter(x -> x%2 == 0 && x%3 == 0, 1:100)
   Σ += x
 end
 println("Σ: $Σ")
-```
+{% endhighlight %}
 
 + version 3
 
-    println("Σ: $(sum(filter(x -> x%2 == 0 && x%3 == 0, 1:100)))")
+{% highlight julia %}
+println("Σ: $(sum(filter(x -> x%2 == 0 && x%3 == 0, 1:100)))")
+{% endhighlight %}
 
 or
 
-    println("Σ: $(sum(find(x -> x%2 == 0 && x%3 == 0, 1:100)))")
+{% highlight julia %}
+println("Σ: $(sum(find(x -> x%2 == 0 && x%3 == 0, 1:100)))")
+{% endhighlight %}
 
 ### 外调 Python 法 ###
 
-    using PyCall
-    pyeval("sum([x for x in xrange(101) if x%2==0 and x%3==0])")
+{% highlight julia %}
+using PyCall
+pyeval("sum([x for x in xrange(101) if x%2==0 and x%3==0])")
+{% endhighlight %}
 
 ### 三元表达式 ###
 
-    sum([x%2 == 0 && x%3 == 0 ? x : 0 for x = 1:100])
+{% highlight julia %}
+sum([x%2 == 0 && x%3 == 0 ? x : 0 for x = 1:100])
+{% endhighlight %}
 
 ### 函数替换版 ###
 
-unicode 函数名
+可以使用各种 unicode 字符作为函数名。
 
-```ruby
+{% highlight julia %}
 Σ = sum
 select = find
 println("Σ: $(Σ(select(x -> x%2 == 0 && x%3 == 0, 1:100)))")
-```
+{% endhighlight %}
 
 ### MATLAB 语法版 ### 
 
-矢量运算
+对矩阵直接做矢量运算
 
-    testrange = [1:100]
-    sum(testrange[(testrange % 2 .== 0) & (testrange % 3 .== 0)])
+{% highlight julia %}
+testrange = [1:100]
+sum(testrange[(testrange % 2 .== 0) & (testrange % 3 .== 0)])
+{% endhighlight %}
 
 ### 管道版 ###
 
-    [1:100] |> set -> filter(i -> i%2 == 0 && i%3 == 0, set) |> sum
+可以轻松的使用管道来写链式的程序。
 
-PS. Julia 还没有实现 conditional list comprehension，实在是很遗憾啊。期待 1.0 版的发布（Support guards/filters in comprehensions · Issue #550 · JuliaLang/julia · GitHub）。
+{% highlight julia %}
+[1:100] |> set -> filter(i -> i%2 == 0 && i%3 == 0, set) |> sum
+{% endhighlight %}
+
+PS. Julia 还没有实现 conditional list comprehension ([https://github.com/JuliaLang/julia/issues/550](https://github.com/JuliaLang/julia/issues/550))，实在是很遗憾啊。期待 1.0 版的发布。
