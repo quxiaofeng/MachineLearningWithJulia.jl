@@ -97,7 +97,7 @@ notebook()
 
 ### 数学计算法 ###
 
-根据
+直接根据先验知识计算。可以把 Julia 直接当作科学计算器，类似 MATLAB 的语法，很友好。
 
 {% highlight julia %}
 sum(6:6:101)
@@ -106,6 +106,8 @@ sum(6:6:101)
 ### 循环 + 条件判断法 ###
 
 + version 1
+
+循序渐进的循环、判断和计算。
 
 {% highlight julia %}
 Σ = 0
@@ -119,6 +121,8 @@ println("Σ: $Σ")
 
 + version 2
 
+直接在循环体外，根据条件筛选循环变量。
+
 {% highlight julia %}
 Σ = 0
 for x in filter(x -> x%2 == 0 && x%3 == 0, 1:100)
@@ -128,6 +132,8 @@ println("Σ: $Σ")
 {% endhighlight %}
 
 + version 3
+
+一行流。其中 `filter` 与 `find` 是等价的函数。
 
 {% highlight julia %}
 println("Σ: $(sum(filter(x -> x%2 == 0 && x%3 == 0, 1:100)))")
@@ -141,6 +147,8 @@ println("Σ: $(sum(find(x -> x%2 == 0 && x%3 == 0, 1:100)))")
 
 ### 外调 Python 法 ###
 
+他山之石可以攻玉。除 Python 外，Julia 也支持调用 C、R、Java、MATLAB 代码。
+
 {% highlight julia %}
 using PyCall
 pyeval("sum([x for x in xrange(101) if x%2==0 and x%3==0])")
@@ -148,13 +156,15 @@ pyeval("sum([x for x in xrange(101) if x%2==0 and x%3==0])")
 
 ### 三元表达式 ###
 
+三元表达式结合后置条件循环。
+
 {% highlight julia %}
 sum([x%2 == 0 && x%3 == 0 ? x : 0 for x = 1:100])
 {% endhighlight %}
 
 ### 函数替换版 ###
 
-可以使用各种 unicode 字符作为函数名。
+Julia 可以使用各种 unicode 字符作为函数名。便于学术上数学公式与代码的一一对应。也可以在代码中写一些奇奇怪怪的东西。
 
 {% highlight julia %}
 Σ = sum
@@ -164,7 +174,7 @@ println("Σ: $(Σ(select(x -> x%2 == 0 && x%3 == 0, 1:100)))")
 
 ### MATLAB 语法版 ### 
 
-对矩阵直接做矢量运算
+可以对矩阵直接做矢量运算。但速度还是不如直接写循环。好处是可以简化建模时间。可以先以正确性为优先，直接使用数学语言写代码，接下来根据 `profile` 结果，有选择的优化。
 
 {% highlight julia %}
 testrange = [1:100]
