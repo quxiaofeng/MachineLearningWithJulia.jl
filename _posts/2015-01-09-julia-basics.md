@@ -100,7 +100,7 @@ notebook()
 直接根据先验知识计算。可以把 Julia 直接当作科学计算器，类似 MATLAB 的语法，很友好。
 
 {% highlight julia %}
-sum(6:6:101)
+sum(6:6:100)
 {% endhighlight %}
 
 ### 循环 + 条件判断法 ###
