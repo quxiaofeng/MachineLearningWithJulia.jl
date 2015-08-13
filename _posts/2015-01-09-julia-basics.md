@@ -90,3 +90,75 @@ notebook()
 方便自由的程序包开发。只要在 GitHub 上开一个 `.jl` 结尾的代码库，然后按照指定格式提交 `METADATA` 给 `JuliaLang`。就可以把自己开发的包提交到 Julia 官方库。很少有哪个语言的委员会这么亲民的，TeXLive 还得是每年升级呢。程序包是否受官方包管理器支持对于成果推广的价值是无法估量的。
 
 有一个类似 IPython 的极为友好的基于 WEB 的 IDE - IJulia。而且 IPython 的下一版直接改名 Jupiter，原因就是对于 Julia、Python 和 R 的全面支持。
+
+## 示例 ##
+
+问题：打印1-100中可被2和3整除的数的總和
+
+### 数学计算法 ###
+
+    sum(6:6:101)
+
+### 循环 + 条件判断法 ###
+
++ version 1
+
+```ruby
+Σ = 0
+for x in 1:100 
+  if x%2 == 0 && x%3 == 0
+    Σ += x
+  end
+end
+println("Σ: $Σ")
+```
+
++ version 2
+
+```ruby
+Σ = 0
+for x in filter(x -> x%2 == 0 && x%3 == 0, 1:100)
+  Σ += x
+end
+println("Σ: $Σ")
+```
+
++ version 3
+
+    println("Σ: $(sum(filter(x -> x%2 == 0 && x%3 == 0, 1:100)))")
+
+or
+
+    println("Σ: $(sum(find(x -> x%2 == 0 && x%3 == 0, 1:100)))")
+
+### 外调 Python 法 ###
+
+    using PyCall
+    pyeval("sum([x for x in xrange(101) if x%2==0 and x%3==0])")
+
+### 三元表达式 ###
+
+    sum([x%2 == 0 && x%3 == 0 ? x : 0 for x = 1:100])
+
+### 函数替换版 ###
+
+unicode 函数名
+
+```ruby
+Σ = sum
+select = find
+println("Σ: $(Σ(select(x -> x%2 == 0 && x%3 == 0, 1:100)))")
+```
+
+### MATLAB 语法版 ### 
+
+矢量运算
+
+    testrange = [1:100]
+    sum(testrange[(testrange % 2 .== 0) & (testrange % 3 .== 0)])
+
+### 管道版 ###
+
+    [1:100] |> set -> filter(i -> i%2 == 0 && i%3 == 0, set) |> sum
+
+PS. Julia 还没有实现 conditional list comprehension，实在是很遗憾啊。期待 1.0 版的发布（Support guards/filters in comprehensions · Issue #550 · JuliaLang/julia · GitHub）。
