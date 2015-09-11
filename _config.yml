@@ -1,8 +1,8 @@
 # Site settings
 title: 'Machine Learning with Julia'
 
-baseurl: /MachineLearningWithJulia.jl # the subpath of your site, e.g. /blog
-url: http://www.quxiaofeng.me # the base hostname & protocol for your site
+baseurl: # the subpath of your site, e.g. /blog
+url: http://www.zhuyingtai.ml # the base hostname & protocol for your site
 
 # Build settings
 markdown:            kramdown
