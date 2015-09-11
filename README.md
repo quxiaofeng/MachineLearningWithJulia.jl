@@ -1,3 +1,3 @@
-# MachineLearningWithJulia
+# Machine Learning with Julia
 
-[http://www.quxiaofeng.me/MachineLearningWithJulia.jl/](http://www.quxiaofeng.me/MachineLearningWithJulia.jl/)
+[http://www.zhuyingtai.ml](http://www.zhuyingtai.ml)
