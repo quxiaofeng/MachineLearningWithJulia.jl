@@ -284,6 +284,19 @@ result['1']
 106
 {% endhighlight %}
 
+并行版
+
+{% highlight julia %}
+@parallel vcat for i='1':2:'9' filter(x->x==i, reduce(string, 1:168)) |> length end
+
+5-element Array{Int64,1}:
+ 106
+  37
+  37
+  27
+  26
+{% endhighlight %}
+
 C 语言版
 
 {% highlight c %}
