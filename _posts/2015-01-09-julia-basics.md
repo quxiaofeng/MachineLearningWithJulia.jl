@@ -306,5 +306,121 @@ int main()
 }
 {% endhighlight %}
 
+## 为什么要用 Julia
 
+作者： Micheal Murphy
 
+原链接见 https://mmstickman.wordpress.com/programming/julia/
+
+Julia 是一个简洁高速，让我十分喜爱的编程语言。Julia 融合了脚本语言与编译语言。Julia 的代码按照脚本语言的方式编写，但运行时使用 Just In Time （JIT） LLVM 自动编译。使用这种方法，Julia 脚本可以像 C 一样快。
+
+为什么要用 Julia
+
++ Julia 是教育初学者的完美编程语言
+
+  + 语法甚至比 Python 还简单
+
+  + 优良的函数式编程教学工具
+
+  + 也是个完美的泛型编程的例子
+
+  + 同时，完美的命令式编程
+
+  + Julia 的元编程同样异常强大
+
+  + 表达数学概念的完美语言
+
++ 与 C 一样快，甚至更快
+
+  + Julia 包含最好的 Fortran 和 C 线性算法库、随机数生成、信号处理和字符串处理。
+
+  + 使用 LLVM JIT 编译，拥有编译语言的性能
+
++ 专为技术（科学、数值）计算设计
+
+  + 广泛的优化的高数值精度数学函数
+
+  + 与 IPython （Jupiter，译者注）的集成提供了图形化的笔记本接口，以便绘制图表。
+
++ 像 Python 一样，支持 REPL，可以交互式编写代码
+
+  + REPL 表示读入、执行、输出、循环
+
+  + REPL 可以立即执行并即时显示
+
++ 泛型编程是头等公民
+
+  + 很多标准库函数都充分利用了泛型编程，例如：
+
+{% highlight julia %}
+open(readall, "file.txt") # 在文件上运行一个函数
+open("file.txt", "a") # 打开一个文件，在文件末尾追写
+open("file.txt") # 只读方式打开一个文件
+{% endhighlight %}
+
+  + 灵活地类型推导
+
+{% highlight julia %}
+square(x) = x * x
+square(5) # 可以用整形参数
+25
+square(5.5) # 也可以用浮点参数
+30.25
+{% endhighlight %}
+
+  + 为新参数类型定义新函数
+
+{% highlight julia %}
+square(array::Array) = map(x->x*x, array)
+square([1, 2, 3, 4, 5])
+5-element Array{Int64,1}:
+  1
+  4
+  9
+ 16
+ 25
+{% endhighlight %}
+
++ 多重分发：鼓励重载函数
+
+  + 接受不同参数的函数可以使用相同的函数名
+
+  + 根据参数自动选择正确的函数
+
++ [针对元编程的优先支持](http://docs.julialang.org/en/latest/manual/metaprogramming/#macros)
+
++ [针对并行计算和分布式计算的设计；并支持协程](http://docs.julialang.org/en/latest/manual/parallel-computing/)
+
+  + 编写并行代码相对简单
+
+  + 如果线程太重，可以用协程
+
++ [强大的类似控制台的能力，可以读写外部程序](http://docs.julialang.org/en/latest/manual/running-external-programs/)
+
+  + 可以操作其他程序的标准输出 stdout 和标准输入 stdin
+
++ 支持直接调用 [C](http://docs.julialang.org/en/latest/manual/calling-c-and-fortran-code/) 和 [Python](https://github.com/stevengj/PyCall.jl) 函数
+
+  + 很多科学计算库是用 C 写的
+
+  + 标准库充分利用了 C 和 Fortran 库
+
+  + 让程序直接与 C 对话是水到渠成的
+
++ [采用模块式（module）的包管理系统](http://docs.julialang.org/en/latest/manual/modules/)
+
+  + 包管理系统可以直接导入 Julia 模块
+
+  + 使用包资源，赋予程序强大的能力
+
++ 充分详实的文档
+
+  + 文档对于任何编程语言来说都是极为重要的
+
+  + Julia 的文档涵盖所有主题，并深入细致
+
+  + 对于没有编程经验的人也很容易理解
+
++ [一份关于 Map, Filter, and Reduce 的简明教程](https://mmstickman.wordpress.com/programming/julia/map-filter-and-reduce/)
+
++ [在线练习 Julia](http://www.tutorialspoint.com/)
