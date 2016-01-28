@@ -190,3 +190,121 @@ sum(testrange[(testrange % 2 .== 0) & (testrange % 3 .== 0)])
 {% endhighlight %}
 
 PS. Julia 还没有实现 conditional list comprehension ([https://github.com/JuliaLang/julia/issues/550](https://github.com/JuliaLang/julia/issues/550))，实在是很遗憾啊。期待 1.0 版的发布。
+
+
+## 练习 ##
+
+一本书 168 页 问页码中 1、3、5、7、9 共出现多少次？答案分别是：106、37、37、27、26。
+
+完整统计
+
+{% highlight julia %}
+a=Dict()
+
+for i in 1:168
+    for j in bytestring("$i")
+        a[j] = if haskey(a, j) a[j] + 1 else 1 end
+    end
+end
+
+[a['1'], a['3'], a['5'], a['7'], a['9']]
+
+5-element Array{Int64,1}:
+ 106
+  37
+  37
+  27
+  26
+{% endhighlight %}
+
+Python3
+
+{% highlight python %}
+from collections import Counter
+cnt = Counter()
+for num in range(169): cnt += Counter(str(num))
+cnt
+
+Counter({'0': 27,
+         '1': 106,
+         '2': 37,
+         '3': 37,
+         '4': 37,
+         '5': 37,
+         '6': 36,
+         '7': 27,
+         '8': 27,
+         '9': 26})
+{% endhighlight %}
+
+一行流
+
+Map + 管道
+
+{% highlight julia %}
+map('1':2:'9') do i filter(x->x==i, reduce(string, 1:168)) |> length end
+
+5-element Array{Int64,1}:
+ 106
+  37
+  37
+  27
+  26
+{% endhighlight %}
+
+list comprehension
+
+{% highlight julia %}
+result = [i=>length(filter(x->x=='0'+i, reduce(string, 1:168))) for i in 1:2:9]
+
+Dict{Int64,Any} with 5 entries:
+  7 => 27
+  9 => 26
+  3 => 37
+  5 => 37
+  1 => 106
+
+result[1]
+106
+{% endhighlight %}
+
+字符串字典
+
+{% highlight julia %}
+result = [i=>length(filter(x->x==i, reduce(string, 1:168))) for i in '1':2:'9']
+
+Dict{Char,Any} with 5 entries:
+  '7' => 27
+  '5' => 37
+  '1' => 106
+  '3' => 37
+  '9' => 26
+
+result['1']
+106
+{% endhighlight %}
+
+C 语言版
+
+{% highlight c %}
+#include <stdio.h>
+
+int main()
+{
+    unsigned count[10] = {0};
+    unsigned temp = 0;
+    for (unsigned i = 1; i <= 168; ++i) {
+        temp = i;
+        while (temp > 0) {
+            ++count[temp % 10];
+            temp /= 10;
+        }
+    }
+    for (unsigned i = 0; i < 10; ++i)
+        printf("%d occurs %d times\n", i, count[i]);
+    return 0;
+}
+{% endhighlight %}
+
+
+
