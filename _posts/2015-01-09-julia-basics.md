@@ -358,7 +358,7 @@ open("file.txt", "a") # 打开一个文件，在文件末尾追写
 open("file.txt") # 只读方式打开一个文件
 {% endhighlight %}
 
-  + 灵活地类型推导
+   + 灵活地类型推导
 
 {% highlight julia %}
 square(x) = x * x
@@ -368,7 +368,7 @@ square(5.5) # 也可以用浮点参数
 30.25
 {% endhighlight %}
 
-  + 为新参数类型定义新函数
+   + 为新参数类型定义新函数
 
 {% highlight julia %}
 square(array::Array) = map(x->x*x, array)
@@ -398,6 +398,7 @@ square([1, 2, 3, 4, 5])
 + [强大的类似控制台的能力，可以读写外部程序](http://docs.julialang.org/en/latest/manual/running-external-programs/)
 
   + 可以操作其他程序的标准输出 stdout 和标准输入 stdin
+
 
 + 支持直接调用 [C](http://docs.julialang.org/en/latest/manual/calling-c-and-fortran-code/) 和 [Python](https://github.com/stevengj/PyCall.jl) 函数
 
