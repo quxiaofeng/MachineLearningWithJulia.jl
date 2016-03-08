@@ -19,7 +19,7 @@ tags: julia viarable type function REPL
 
 ![]({{ "/assets/images/julia-repl.png" | prepend: site.baseurl | prepend: site.url }})
 
-显示版本、平台和 `julia>` 提示符。在提示符后面可以运行 Julia 代码。
+显示版本、平台和 `julia>` 提示符。在提示符后面可以运行 Julia 代码。根据版本不同，显示的版本号可能不一样。
 
 ## GitHub 上 Julia 语言的学习代码 ##
 
@@ -83,6 +83,34 @@ notebook()
 
 直接调用 C， Python， 和 R。C 调用这个算是现代语言的基本功能，但 Julia 做得很舒服。无需配置，直接用ccall。格式如下，`ccall((：函数名，“指定C库文件”)，返回值类型，（输入参数数据类型），输入参数)`。[PyCall](https://github.com/stevengj/PyCall.jl) （stevengj/PyCall.jl · GitHub）得说是很流氓的。例如：绘图包 [PyPlot](https://github.com/stevengj/PyPlot.jl) （stevengj/PyPlot.jl · GitHub）。一连几年 julia 都一直在 PyCon 上做宣传。同样邪恶的还有 [RCall](https://github.com/JuliaStats/RCall.jl) (JuliaStats/RCall.jl · GitHub)。
 
+[C++ REPL](https://github.com/Keno/Cxx.jl#user-content-the-c-repl)。使用 `Cxx.jl` 可以直接解释执行 `C++` 代码。例如：
+
+{% highlight julia %}
+# include headers
+julia> using Cxx
+julia> cxx""" #include<iostream> """  
+
+# Declare the function
+julia> cxx"""  
+         void mycppfunction() {   
+            int z = 0;
+            int y = 5;
+            int x = 10;
+            z = x*y + 2;
+            std::cout << "The number is " << z << std::endl;
+         }
+      """
+# Convert C++ to Julia function
+julia> julia_function() = @cxx mycppfunction()
+julia_function (generic function with 1 method)
+
+# Run the function
+julia> julia_function()
+The number is 52
+{% endhighlight %}
+
+PS.暂时还不支持 `windows` 平台。
+
 对于 MATLAB 用户，Julia 也是极为友好。首先是 Julia 的语法本身就是面向数学的，与 MATLAB 极为相似，甚至可以一句对一句的翻译。JuliaLang 也有个包叫 [MATLAB.jl](https://github.com/JuliaLang/MATLAB.jl) (JuliaLang/MATLAB.jl · GitHub)，支持直接调用 MATLAB，最大限度的保护你的智力投资。脱离 MATLAB 之后，如果有依赖于 MATLAB 的历史数据，也可以使用 [`MAT.jl` 包](https://github.com/simonster/MAT.jl)来读写 `.mat` 文件。
 
 原生的单元测试支持。默认程序包开发的格式中，就内置了测试架构。语言内置单元测试宏 `@test`。其实这里稍差一点，还没有对于行为驱动开发 （BDD）的原生支持。这一点可能在我看懂 [FactCheck.jl](https://github.com/julialang/factcheck.jl) （JuliaLang/FactCheck.jl · GitHub）之后再进一步修改。
@@ -93,7 +121,7 @@ notebook()
 
 ## 示例 ##
 
-问题：打印1-100中可被2和3整除的数的總和
+问题：打印1-100中可被2和3整除的数的總和。
 
 ### 数学计算法 ###
 
@@ -203,9 +231,11 @@ sum(testrange[(testrange % 2 .== 0) & (testrange % 3 .== 0)])
 PS. Julia 还没有实现 conditional list comprehension ([https://github.com/JuliaLang/julia/issues/550](https://github.com/JuliaLang/julia/issues/550))，实在是很遗憾啊。期待 1.0 版的发布。
 
 
-## 练习 ##
+## 示例 ##
 
-一本书 168 页 问页码中 1、3、5、7、9 共出现多少次？答案分别是：106、37、37、27、26。
+一本书 168 页。问页码中 1、3、5、7、9 几个数字都出现多少次？
+
+> 答案分别是：106、37、37、27、26。
 
 完整统计
 
