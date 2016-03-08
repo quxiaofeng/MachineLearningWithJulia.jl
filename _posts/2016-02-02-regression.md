@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Regression"
-date: 2015-01-12
+date: 2016-02-02
 backgrounds:
     - /assets/images/backgrounds/oil-painting-fire.jpg
 thumb: /assets/images/thumbs/90449abe9237913eb8bc74f6bd19dd8a-ld.jpg

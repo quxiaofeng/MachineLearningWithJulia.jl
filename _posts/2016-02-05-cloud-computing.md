@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cloud Computing"
-date: 2015-02-06
+date: 2016-02-05
 backgrounds:
     - /assets/images/backgrounds/lake.jpg
 thumb: /assets/images/thumbs/6199bdbc1c554baf889bf5da4471011c-ld.jpg

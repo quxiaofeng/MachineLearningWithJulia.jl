@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Unsupervised Learning"
-date: 2015-02-05
+date: 2016-02-03 14:24:03
 backgrounds:
     - /assets/images/backgrounds/reflections.jpg
 thumb: /assets/images/thumbs/bd5c62c0b788cf81ee386665bfcadfad-ld.jpg
