@@ -133,7 +133,7 @@ println("Σ: $Σ")
 
 + version 3
 
-一行流。其中 `filter` 与 `find` 是等价的函数。
+一行流。其中 `filter` 与 `find` 是“等价”的函数。
 
 {% highlight julia %}
 println("Σ: $(sum(filter(x -> x%2 == 0 && x%3 == 0, 1:100)))")
@@ -144,6 +144,8 @@ or
 {% highlight julia %}
 println("Σ: $(sum(find(x -> x%2 == 0 && x%3 == 0, 1:100)))")
 {% endhighlight %}
+
+PS. 只是在这个例子中 `find` 与 `filter` 等价。根据 `julia` 的文档，[`find` 只用于 `Array`](http://docs.julialang.org/en/latest/stdlib/arrays/#Base.find)，按照 `Base.find (Julia function, in Arrays)` 格式调用；而 `filter` 则强大得多，作为函数式编程的一个常见元素，根据[文档](http://docs.julialang.org/en/latest/stdlib/collections/#Base.filter)，可以按照 `Base.filter (Julia function, in Collections and Data Structures)` 格式调用。
 
 ### 外调 Python 法 ###
 
