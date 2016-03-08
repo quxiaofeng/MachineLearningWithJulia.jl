@@ -5,7 +5,12 @@ baseurl: # the subpath of your site, e.g. /blog
 url: http://www.zhuyingtai.ml # the base hostname & protocol for your site
 
 # Build settings
-relative_permalinks: false
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 permalink:           :title/
 
 pagination:          true
