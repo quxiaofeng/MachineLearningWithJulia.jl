@@ -332,7 +332,7 @@ int main()
 
 ## 为什么要用 Julia
 
-作者： Micheal Murphy
+作者： [Micheal Murphy](https://mmstickman.wordpress.com/about/)
 
 翻译： [曲晓峰](http://www.quxiaofeng.me/about)
 
