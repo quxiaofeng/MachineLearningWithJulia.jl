@@ -39,17 +39,17 @@ tags: julia viarable type function REPL
 
 #### 安装 ####
 
-{% highlight julia %}
+```julia
 Pkg.update()
 Pkg.add("IJulia")
-{% endhighlight %}
+```
 
 #### 运行 ####
 
-{% highlight julia %}
+```julia
 using IJulia
 notebook()
-{% endhighlight %}
+```
 
 运行新建窗口如下
 
@@ -85,7 +85,7 @@ notebook()
 
 [C++ REPL](https://github.com/Keno/Cxx.jl#user-content-the-c-repl)。使用 `Cxx.jl` 可以直接解释执行 `C++` 代码。例如：
 
-{% highlight julia %}
+```julia
 # include headers
 julia> using Cxx
 julia> cxx""" #include<iostream> """  
@@ -107,7 +107,7 @@ julia_function (generic function with 1 method)
 # Run the function
 julia> julia_function()
 The number is 52
-{% endhighlight %}
+```
 
 PS.暂时还不支持 `windows` 平台。
 
@@ -127,9 +127,9 @@ PS.暂时还不支持 `windows` 平台。
 
 直接根据先验知识计算。可以把 Julia 直接当作科学计算器，类似 MATLAB 的语法，很友好。
 
-{% highlight julia %}
+```julia
 sum(6:6:100)
-{% endhighlight %}
+```
 
 ### 循环 + 条件判断法 ###
 
@@ -137,7 +137,7 @@ sum(6:6:100)
 
 循序渐进的循环、判断和计算。
 
-{% highlight julia %}
+```julia
 Σ = 0
 for x in 1:100 
   if x%2 == 0 && x%3 == 0
@@ -145,33 +145,33 @@ for x in 1:100
   end
 end
 println("Σ: $Σ")
-{% endhighlight %}
+```
 
 + version 2
 
 直接在循环体外，根据条件筛选循环变量。
 
-{% highlight julia %}
+```julia
 Σ = 0
 for x in filter(x -> x%2 == 0 && x%3 == 0, 1:100)
   Σ += x
 end
 println("Σ: $Σ")
-{% endhighlight %}
+```
 
 + version 3
 
 一行流。其中 `filter` 与 `find` 是“等价”的函数。
 
-{% highlight julia %}
+```julia
 println("Σ: $(sum(filter(x -> x%2 == 0 && x%3 == 0, 1:100)))")
-{% endhighlight %}
+```
 
 or
 
-{% highlight julia %}
+```julia
 println("Σ: $(sum(find(x -> x%2 == 0 && x%3 == 0, 1:100)))")
-{% endhighlight %}
+```
 
 PS. 只是在这个例子中 `find` 与 `filter` 等价。根据 `julia` 的文档，[`find` 只用于 `Array`](http://docs.julialang.org/en/latest/stdlib/arrays/#Base.find)，按照 `Base.find (Julia function, in Arrays)` 格式调用；而 `filter` 则强大得多，作为函数式编程的一个常见元素，根据[文档](http://docs.julialang.org/en/latest/stdlib/collections/#Base.filter)，可以按照 `Base.filter (Julia function, in Collections and Data Structures)` 格式调用。
 
@@ -181,52 +181,52 @@ PS. 只是在这个例子中 `find` 与 `filter` 等价。根据 `julia` 的文�
 
 **Python 2**
 
-{% highlight julia %}
+```julia
 using PyCall
 pyeval("sum([x for x in xrange(101) if x%2==0 and x%3==0])")
-{% endhighlight %}
+```
 
 **Python 3**
 
-{% highlight julia %}
+```julia
 using PyCall
 pyeval("sum([x for x in range(100) if x%2==0 and x%3==0])")
-{% endhighlight %}
+```
 
 ### 三元表达式 ###
 
 三元表达式结合后置条件循环。
 
-{% highlight julia %}
+```julia
 sum([x%2 == 0 && x%3 == 0 ? x : 0 for x = 1:100])
-{% endhighlight %}
+```
 
 ### 函数替换版 ###
 
 Julia 可以使用各种 unicode 字符作为函数名。便于学术上数学公式与代码的一一对应。也可以在代码中写一些奇奇怪怪的东西。
 
-{% highlight julia %}
+```julia
 Σ = sum
 select = find
 println("Σ: $(Σ(select(x -> x%2 == 0 && x%3 == 0, 1:100)))")
-{% endhighlight %}
+```
 
 ### MATLAB 语法版 ### 
 
 可以对矩阵直接做矢量运算。但速度还是不如直接写循环。好处是可以简化建模时间。可以先以正确性为优先，直接使用数学语言写代码，接下来根据 `profile` 结果，有选择的优化。
 
-{% highlight julia %}
+```julia
 testrange = 1:100
 sum(testrange[(testrange % 2 .== 0) & (testrange % 3 .== 0)])
-{% endhighlight %}
+```
 
 ### 管道版 ###
 
 可以轻松的使用管道来写链式的程序。
 
-{% highlight julia %}
+```julia
 1:100 |> set -> filter(i -> i%2 == 0 && i%3 == 0, set) |> sum
-{% endhighlight %}
+```
 
 PS. Julia 还没有实现 conditional list comprehension ([https://github.com/JuliaLang/julia/issues/550](https://github.com/JuliaLang/julia/issues/550))，实在是很遗憾啊。期待 1.0 版的发布。
 
@@ -239,7 +239,7 @@ PS. Julia 还没有实现 conditional list comprehension ([https://github.com/Ju
 
 完整统计
 
-{% highlight julia %}
+```julia
 a=Dict()
 
 for i in 1:168
@@ -256,11 +256,11 @@ end
   37
   27
   26
-{% endhighlight %}
+```
 
 Python3
 
-{% highlight python %}
+```python
 from collections import Counter
 cnt = Counter()
 for num in range(169): cnt += Counter(str(num))
@@ -276,13 +276,13 @@ Counter({'0': 27,
          '7': 27,
          '8': 27,
          '9': 26})
-{% endhighlight %}
+```
 
 一行流
 
 Map + 管道
 
-{% highlight julia %}
+```julia
 map('1':2:'9') do i filter(x->x==i, reduce(string, 1:168)) |> length end
 
 5-element Array{Int64,1}:
@@ -291,11 +291,11 @@ map('1':2:'9') do i filter(x->x==i, reduce(string, 1:168)) |> length end
   37
   27
   26
-{% endhighlight %}
+```
 
 list comprehension
 
-{% highlight julia %}
+```julia
 result = [i=>length(filter(x->x=='0'+i, reduce(string, 1:168))) for i in 1:2:9]
 
 Dict{Int64,Any} with 5 entries:
@@ -307,11 +307,11 @@ Dict{Int64,Any} with 5 entries:
 
 result[1]
 106
-{% endhighlight %}
+```
 
 字符串字典
 
-{% highlight julia %}
+```julia
 result = [i=>length(filter(x->x==i, reduce(string, 1:168))) for i in '1':2:'9']
 
 Dict{Char,Any} with 5 entries:
@@ -323,11 +323,11 @@ Dict{Char,Any} with 5 entries:
 
 result['1']
 106
-{% endhighlight %}
+```
 
 并行版
 
-{% highlight julia %}
+```julia
 @parallel vcat for i='1':2:'9' filter(x->x==i, reduce(string, 1:168)) |> length end
 
 5-element Array{Int64,1}:
@@ -336,11 +336,11 @@ result['1']
   37
   27
   26
-{% endhighlight %}
+```
 
 C 语言版
 
-{% highlight c %}
+```c
 #include <stdio.h>
 
 int main()
@@ -358,7 +358,7 @@ int main()
         printf("%d occurs %d times\n", i, count[i]);
     return 0;
 }
-{% endhighlight %}
+```
 
 ## 为什么要用 Julia
 
@@ -408,25 +408,25 @@ Julia 是一个简洁高速，让我十分喜爱的编程语言。Julia 融合�
 
   + 很多标准库函数都充分利用了泛型编程，例如：
 
-{% highlight julia %}
+```julia
 open(readall, "file.txt") # 在文件上运行一个函数
 open("file.txt", "a") # 打开一个文件，在文件末尾追写
 open("file.txt") # 只读方式打开一个文件
-{% endhighlight %}
+```
 
    + 灵活地类型推导
 
-{% highlight julia %}
+```julia
 square(x) = x * x
 square(5) # 可以用整形参数
 25
 square(5.5) # 也可以用浮点参数
 30.25
-{% endhighlight %}
+```
 
    + 为新参数类型定义新函数
 
-{% highlight julia %}
+```julia
 square(array::Array) = map(x->x*x, array)
 square([1, 2, 3, 4, 5])
 5-element Array{Int64,1}:
@@ -435,7 +435,7 @@ square([1, 2, 3, 4, 5])
   9
  16
  25
-{% endhighlight %}
+```
 
 + 多重分发：鼓励重载函数
 
