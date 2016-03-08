@@ -151,9 +151,18 @@ PS. 只是在这个例子中 `find` 与 `filter` 等价。根据 `julia` 的文�
 
 他山之石可以攻玉。除 Python 外，Julia 也支持调用 C、R、Java、MATLAB 代码。
 
+**Python 2**
+
 {% highlight julia %}
 using PyCall
 pyeval("sum([x for x in xrange(101) if x%2==0 and x%3==0])")
+{% endhighlight %}
+
+**Python 3**
+
+{% highlight julia %}
+using PyCall
+pyeval("sum([x for x in range(100) if x%2==0 and x%3==0])")
 {% endhighlight %}
 
 ### 三元表达式 ###
@@ -179,7 +188,7 @@ println("Σ: $(Σ(select(x -> x%2 == 0 && x%3 == 0, 1:100)))")
 可以对矩阵直接做矢量运算。但速度还是不如直接写循环。好处是可以简化建模时间。可以先以正确性为优先，直接使用数学语言写代码，接下来根据 `profile` 结果，有选择的优化。
 
 {% highlight julia %}
-testrange = [1:100]
+testrange = 1:100
 sum(testrange[(testrange % 2 .== 0) & (testrange % 3 .== 0)])
 {% endhighlight %}
 
@@ -188,7 +197,7 @@ sum(testrange[(testrange % 2 .== 0) & (testrange % 3 .== 0)])
 可以轻松的使用管道来写链式的程序。
 
 {% highlight julia %}
-[1:100] |> set -> filter(i -> i%2 == 0 && i%3 == 0, set) |> sum
+1:100 |> set -> filter(i -> i%2 == 0 && i%3 == 0, set) |> sum
 {% endhighlight %}
 
 PS. Julia 还没有实现 conditional list comprehension ([https://github.com/JuliaLang/julia/issues/550](https://github.com/JuliaLang/julia/issues/550))，实在是很遗憾啊。期待 1.0 版的发布。
@@ -325,7 +334,9 @@ int main()
 
 作者： Micheal Murphy
 
-原链接见 https://mmstickman.wordpress.com/programming/julia/
+翻译： [曲晓峰](http://www.quxiaofeng.me/about)
+
+原文见 [https://mmstickman.wordpress.com/programming/julia/](https://mmstickman.wordpress.com/programming/julia/)
 
 Julia 是一个简洁高速，让我十分喜爱的编程语言。Julia 融合了脚本语言与编译语言。Julia 的代码按照脚本语言的方式编写，但运行时使用 Just In Time （JIT） LLVM 自动编译。使用这种方法，Julia 脚本可以像 C 一样快。
 
