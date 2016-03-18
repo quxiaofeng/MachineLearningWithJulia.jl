@@ -3,8 +3,8 @@ layout: post
 title: "Regression"
 date: 2016-02-02
 backgrounds:
-    - /assets/images/backgrounds/oil-painting-fire.jpg
-thumb: /assets/images/thumbs/90449abe9237913eb8bc74f6bd19dd8a-ld.jpg
+    - /assets/images/backgrounds/glass-and-cup-in-library.jpg
+thumb: /assets/images/thumbs/breakfast-burger.jpg
 category: julia
 tags: work business metropolis
 ---
