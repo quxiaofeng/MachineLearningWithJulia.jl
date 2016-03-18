@@ -4,7 +4,7 @@ title: "Cloud Computing"
 date: 2016-02-05
 backgrounds:
     - /assets/images/backgrounds/town-street.jpg
-thumb: /assets/images/thumbs/spinning-girl.jpg
+thumb: /assets/images/thumbs/cloud-in-water.jpg
 category: julia
 tags: home work office coding design
 ---
