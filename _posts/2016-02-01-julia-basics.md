@@ -9,6 +9,14 @@ category: julia
 tags: julia viarable type function REPL
 ---
 
+## 目录 ##
+
++ [Julia 的安装与运行](#section-1)
++ [Julia 语言评价](#julia-)
++ [Julia 示例一](#section-8)
++ [Julia 示例二](#section-14)
++ [为什么要用 Julia（一篇翻译的文章）](#julia)
+
 ## 安装 ##
 
 到[官网下载页面 (JuliaLang.org/downloads) ](http://julialang.org/downloads/)下载支持所用平台的版本，然后安装。
@@ -119,7 +127,7 @@ PS.暂时还不支持 `windows` 平台。
 
 有一个类似 IPython 的极为友好的基于 WEB 的 IDE - IJulia。而且 IPython 的下一版直接改名 Jupiter，原因就是对于 Julia、Python 和 R 的全面支持。
 
-## 示例 ##
+## 示例 一 ##
 
 问题：打印1-100中可被2和3整除的数的總和。
 
@@ -231,7 +239,7 @@ sum(testrange[(testrange % 2 .== 0) & (testrange % 3 .== 0)])
 PS. Julia 还没有实现 conditional list comprehension ([https://github.com/JuliaLang/julia/issues/550](https://github.com/JuliaLang/julia/issues/550))，实在是很遗憾啊。期待 1.0 版的发布。
 
 
-## 示例 ##
+## 示例 二 ##
 
 一本书 168 页。问页码中 1、3、5、7、9 几个数字都出现多少次？
 
