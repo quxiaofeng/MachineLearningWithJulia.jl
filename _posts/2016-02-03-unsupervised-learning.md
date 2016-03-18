@@ -3,8 +3,8 @@ layout: post
 title: "Unsupervised Learning"
 date: 2016-02-03 14:24:03
 backgrounds:
-    - /assets/images/backgrounds/reflections.jpg
-thumb: /assets/images/thumbs/bd5c62c0b788cf81ee386665bfcadfad-ld.jpg
+    - /assets/images/backgrounds/stars-in-night-sky.jpg
+thumb: /assets/images/thumbs/stars-in-night-sky.jpg
 category: julia
 tags: japan winter spring metropolis
 ---
