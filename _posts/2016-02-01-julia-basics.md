@@ -30,17 +30,15 @@ tags: julia viarable type function REPL
 **Julia Version 0.3.7**
 ![]({{ "/assets/images/julia-repl.png" | prepend: site.url }})
 **Julia Version 0.4.5**
-![]({{ "/assets/images/julia-repl.png" | prepend: site.url }})
+![]({{ "/assets/images/julia-repl-045.png" | prepend: site.url }})
 
 显示版本、平台和 `julia>` 提示符。在提示符后面可以运行 Julia 代码。根据版本不同，显示的版本号可能不一样。
 
 ## Julia 语言基础 ##
 
-### 变量 ###
+### 基本数据类型 ###
 
-简单说，基本变量跟 MATLAB 使用方式一样。变量不需要声明，可以直接使用; `#` 开始是注释。变量的类型不是强制使用的。
-
-额外的优点是：可以使用 unicode 字符作为变量名。包括数学常用的希腊字母和中文。前者方便直接使用数学语言写数学相关的程序；后者方便中文用户在日常脚本中使用。
+简单说，变量跟 MATLAB 使用方式一样，不需要声明，可以直接使用。 `#` 开始是注释。
 
 ```julia
 julia> a = 3 # 默认数字是整形数 `Int64`
@@ -86,6 +84,12 @@ julia> 3 ÷ 2 # 也可以使用 Unicode 除法符号 `÷`。这个符号在 REPL
 julia> 3 \ 8 # 左除就是左边是除数，右边是被除数
 2.6666666666666665
 ```
+
+### 变量 ###
+
+变量的类型不是强制使用的。
+
+额外的优点是：可以使用 unicode 字符作为变量名。包括数学常用的希腊字母和中文。前者方便直接使用数学语言写数学相关的程序；后者方便中文用户在日常脚本中使用。
 
 ### 控制逻辑 ###
 
