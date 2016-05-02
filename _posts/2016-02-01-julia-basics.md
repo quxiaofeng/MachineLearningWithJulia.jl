@@ -11,11 +11,13 @@ tags: julia viarable type function REPL
 
 ## 目录 ##
 
-+ [Julia 的安装与运行](#section-1)
-+ [Julia 语言评价](#julia-)
-+ [Julia 示例一](#section-8)
-+ [Julia 示例二](#section-14)
-+ [为什么要用 Julia（一篇翻译的文章）](#julia)
+1. [Julia 的安装与运行](#section-1)
+2. Julia 语言基础
+3. Jupyter 与 Juno 开发环境
+3. [Julia 语言评价](#julia-)
+4. [Julia 示例一](#section-8)
+5. [Julia 示例二](#section-14)
+6. [为什么要用 Julia（一篇翻译的文章）](#julia)
 
 ## 安装 ##
 
@@ -25,9 +27,74 @@ tags: julia viarable type function REPL
 
 执行 Julia 的控制台界面如下。
 
-![]({{ "/assets/images/julia-repl.png" | prepend: site.baseurl | prepend: site.url }})
+**Julia Version 0.3.7**
+![]({{ "/assets/images/julia-repl.png" | prepend: site.url }})
+**Julia Version 0.4.5**
+![]({{ "/assets/images/julia-repl.png" | prepend: site.url }})
 
 显示版本、平台和 `julia>` 提示符。在提示符后面可以运行 Julia 代码。根据版本不同，显示的版本号可能不一样。
+
+## Julia 语言基础 ##
+
+### 变量 ###
+
+简单说，基本变量跟 MATLAB 使用方式一样。变量不需要声明，可以直接使用; `#` 开始是注释。变量的类型不是强制使用的。
+
+额外的优点是：可以使用 unicode 字符作为变量名。包括数学常用的希腊字母和中文。前者方便直接使用数学语言写数学相关的程序；后者方便中文用户在日常脚本中使用。
+
+```julia
+julia> a = 3 # 默认数字是整形数 `Int64`
+3
+
+julia> typeof(a) # 查询变量类型可以使用 `typeof()` 函数
+Int64
+
+julia> b = a + 2.2 # 自动类型提升到浮点数 `Float64`
+5.2
+
+julia> typeof(b)
+Float64
+```
+
+常用基本数据类型包括：`Int64` 整形数, `Float64` 浮点数, `Complex{Int64}` 复数, `Rational{Int64}` 有理数。
+```julia
+julia> 2 + 1im # Complex{Int64}
+2 + 1im
+
+julia> 2//3 # Rational{Int64}
+2//3
+```
+
+### 基本运算 ###
+
+基本运算：`+` 加, `-` 减, `*` 乘, `/` 除, `div()` 整除, `\` 左除, `^` 乘方, `%` 求余；调整优先级用 `(a + b)`。虽然运算符有优先级，但要清晰，不要依赖，才是最佳实践。 
+```julia
+julia> 24/6 # 除法默认是浮点数，哪怕能整除也是浮点数
+4.0
+
+julia> 5/6
+0.8333333333333334
+
+julia> div(7, 3) # 如果需要求整除结果，可以使用 `div()` 函数
+2
+
+julia> 3 ÷ 2 # 也可以使用 Unicode 除法符号 `÷`。这个符号在 REPL 中可以通过 `\div + <tab>` 来输入。
+1
+
+julia> 3 \ 8 # 左除就是左边是除数，右边是被除数
+2.6666666666666665
+```
+
+### 控制逻辑 ###
+
+支持基本的 if-else，for。但也可以完全不用 if-else。
+
+### 函数 ###
+
+函数的声明可以使用完整声明，也可以用类似隐函数的方式使用。
+
+![]({{ "/assets/images/julia-function-example.jpg" | prepend: site.url }})
+
 
 ## GitHub 上 Julia 语言的学习代码 ##
 
@@ -61,25 +128,12 @@ notebook()
 
 运行新建窗口如下
 
-![]({{ "/assets/images/jupiter-new.png" | prepend: site.baseurl | prepend: site.url }})
+![]({{ "/assets/images/jupiter-new.png" | prepend: site.url }})
 
-### 变量 ###
 
-简单说，基本变量跟 MATLAB 使用方式一样。变量的类型不是强制使用的。
+一个简单的例子
 
-额外的优点是：可以使用 unicode 字符作为变量名。包括数学常用的希腊字母和中文。前者方便直接使用数学语言写数学相关的程序；后者方便中文读者日常使用。
-
-![]({{ "/assets/images/julia-viarable-example.jpg" | prepend: site.baseurl | prepend: site.url }})
-
-### 控制逻辑 ###
-
-支持基本的 if-else，for。但也可以完全不用 if-else。
-
-### 函数 ###
-
-函数的声明可以使用完整声明，也可以用类似隐函数的方式使用。
-
-![]({{ "/assets/images/julia-function-example.jpg" | prepend: site.baseurl | prepend: site.url }})
+![]({{ "/assets/images/julia-viarable-example.jpg" | prepend: site.url }})
 
 ## Julia 语言的优点 ##
 
