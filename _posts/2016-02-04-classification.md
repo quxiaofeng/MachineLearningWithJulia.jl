@@ -3,8 +3,8 @@ layout: post
 title: "Classification"
 date: 2016-02-04 15:17:47
 backgrounds:
-    - /assets/images/backgrounds/river-and-mountain.jpg
-thumb: /assets/images/thumbs/girl-behind-mirror-in-rain.jpg
+    - /assets/images/backgrounds/australia-marree.jpg
+thumb: /assets/images/thumbs/river-and-mountain.jpg
 category: julia
 tags: pattern classification
 ---
