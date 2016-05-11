@@ -3,7 +3,7 @@ layout: post
 title: "Julia 基础"
 date: 2016-02-01 21:15:18
 backgrounds:
-    - /assets/images/backgrounds/julia-function.jpg
+    - /assets/images/backgrounds/kazakhstan-korgalzhyn.jpg
 thumb: /assets/images/thumbs/julia-logo.jpg
 category: julia
 tags: julia viarable type function REPL
