@@ -15,7 +15,7 @@ tags: pattern classification
 
 调用 Python 的 scikit-learn 包的 SVM 代码。
 
-{% highlight julia %}
+```julia
  # julia "svmtest.jl"
 using PyCall
 
@@ -28,7 +28,7 @@ clf = svm.LinearSVC()
 clf[:fit](X, y)
 dec = clf[:decision_function]([1.2 0.8])
 println("$(dec[1,2])")
-{% endhighlight %}
+```
 
 ## DPL
 
@@ -45,20 +45,20 @@ $$s.t.\ \|d_i\|_2^2\leq 1$$
 
 ### 安装
 
-{% highlight julia %}
+```julia
 Pkg.update(); Pkg.add("ProjectiveDictionaryPariLearning")
-{% endhighlight %}
+```
 
 ### 使用
 
 #### 训练
 
-{% highlight julia %}
+```julia
 DictMat, EncoderMat = TrainDPL(TrData, TrLabel, DictSize, τ, λ, γ)
-{% endhighlight %}
+```
 
 #### 分类
 
-{% highlight julia %}
+```julia
 PredictLabel, Error, Distance = ClassificationDPL(TtData, DictMat, EncoderMat, DictSize)
-{% endhighlight %}
+```
