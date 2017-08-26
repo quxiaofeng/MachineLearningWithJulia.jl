@@ -108,6 +108,7 @@ julia> 3 \ 8 # 左除就是左边是除数，右边是被除数
 + [https://github.com/chrisvoncsefalvay/learn-julia-the-hard-way](https://github.com/chrisvoncsefalvay/learn-julia-the-hard-way)
 + [https://github.com/chezou/julia-100-exercises](https://github.com/chezou/julia-100-exercises)
 + [https://github.com/Aerlinger/JuliaExamples](https://github.com/Aerlinger/JuliaExamples)
++ [https://github.com/GaZ3ll3/Step_In_Julia](https://github.com/GaZ3ll3/Step_In_Julia)
 
 ## IJulia 及 Julia 变量、控制逻辑与函数 ##
 
