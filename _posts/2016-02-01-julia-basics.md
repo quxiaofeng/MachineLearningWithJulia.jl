@@ -550,3 +550,7 @@ square([1, 2, 3, 4, 5])
 + [一份关于 Map, Filter, and Reduce 的简明教程](https://mmstickman.wordpress.com/programming/julia/map-filter-and-reduce/)
 
 + [在线练习 Julia](http://www.tutorialspoint.com/)
+
+## Julia 生态
+
++ Julia 包博物馆[https://github.com/Roger-luo/JuliaCh.jl](https://github.com/Roger-luo/JuliaCh.jl)
